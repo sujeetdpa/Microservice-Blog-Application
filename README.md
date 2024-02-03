@@ -127,7 +127,7 @@ This is a simple blog application designed with microservices architecture. The 
     }
     ```
   - Delete a Single Blog: Use DELETE mapping with API endpoint /api/blogs/{id}.
-  - Search for Blogs: Use GET mapping with API endpoint /api/blogs/search?key=some_text.
+  - Search for Blogs: Use GET mapping with API endpoint /api/blogs/search?title=some_text.
   - #### Comment Service Api
     - Fetch Comments for a Specific Blog: Use GET mapping with API endpoint /api/comments/blog/{id}.
     - Add a Comment for a Blog: Use POST mapping with API endpoint /api/comments.
