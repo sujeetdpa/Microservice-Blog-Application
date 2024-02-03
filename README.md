@@ -35,15 +35,42 @@ This is a simple blog application designed with microservices architecture. The 
 - Maven
 
 ### Setup and Run
+- Run all the services on the same machine.
+  - If the services to be run on different machine then following properties must be set explicitely
+    - Blog service
+      ```properties
+          backend.comment-service.hostname: http://<IP_ADDRESS>
+          backend.comment-service.port: 8001
 
+          backend.reaction-service.hostname: http://<IP_ADDRESS>
+          backend.reaction-service.port: 8002
+      ```
+      - Comment service
+      ```properties
+          backend.blog-service.hostname: http://<IP_ADDRESS>
+          backend.blog-service.port: 8000
+
+          backend.reaction-service.hostname: http://<IP_ADDRESS>
+          backend.reaction-service.port: 8002
+      ```
+      - Reaction service
+      ```properties
+          backend.blog-service.hostname: http://<IP_ADDRESS>
+          backend.blog-service.port: 8000
+
+          backend.comment-service.hostname: http://<IP_ADDRESS>
+          backend.comment-service.port: 8001
+      ```
 - Used an in memory H2 database 
 - But if external database is intended to be used then following configuration need to set/changed in the application.properties file: <br>
-    - spring.datasource.url= jdbc:h2:mem:blogdb
-    - spring.datasource.driverClassName= org.h2.Driver
-    - spring.datasource.username= admin
-    - spring.datasource.password= admin
-    - spring.jpa.hibernate.ddl-auto= create
-    - spring.jpa.database-platform= org.hibernate.dialect.H2Dialect
+  ```properties
+        spring.datasource.url= jdbc:h2:mem:blogdb
+        spring.datasource.driverClassName= org.h2.Driver
+        spring.datasource.username= admin
+        spring.datasource.password= admin
+        spring.jpa.hibernate.ddl-auto= create
+        spring.jpa.database-platform= org.hibernate.dialect.H2Dialect
+  ```
 - Port Configuration
    - Blog Service: 8000
    - Comment Service: 8001
