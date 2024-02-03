@@ -25,11 +25,15 @@ This is a simple blog application designed with microservices architecture. The 
 - Reaction Service: Provides the ability for users to react to blog posts with different emoticons (like, love, laugh, etc.).
 
 ## Getting Started
+### Technology Used
+  - Java
+  - Spring Boot 3
+  - Spring Data JPA
+  - In memory H2 Database
+  - Maven
 
 ### Prerequisites
-
 - Make sure you have the following installed on your system:
-- Spring Boot 3
 - Java 17+
 - Maven
 
