@@ -4,7 +4,6 @@ This is a simple blog application designed with microservices architecture. The 
 # Table of Contents
 
 - [Features](#features)
-- [Architecture](#architecture)
 - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
