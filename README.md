@@ -30,6 +30,7 @@ This is a simple blog application designed with microservices architecture. The 
 ### Prerequisites
 
 - Make sure you have the following installed on your system:
+- Spring Boot 3
 - Java 17+
 - Maven
 
@@ -77,6 +78,7 @@ This is a simple blog application designed with microservices architecture. The 
     java -jar reaction-service-0.0.1-SNAPSHOT.jar
     
 ## API Endpoints
+- Detailed information about APIs is included in the postman collection file
 
 - #### Blog Service Api
   - Fetch a Single Blog: Use GET mapping with API endpoint /api/blogs/{id}.
