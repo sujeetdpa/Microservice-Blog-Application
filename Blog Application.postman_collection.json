@@ -152,7 +152,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/blogs/search?key=on",
+							"raw": "http://localhost:8000/api/blogs/search?title=on",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -165,7 +165,7 @@
 							],
 							"query": [
 								{
-									"key": "key",
+									"key": "title",
 									"value": "on"
 								}
 							]
