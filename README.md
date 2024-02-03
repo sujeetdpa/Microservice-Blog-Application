@@ -36,7 +36,7 @@ This is a simple blog application designed with microservices architecture. The 
 
 ### Setup and Run
 - Run all the services on the same machine.
-  - If the services to be run on different machine then following properties must be set explicitely
+  - If the services to be run on different machine then following properties must be set explicitly
     - Blog service
       ```properties
           backend.comment-service.hostname: http://<IP_ADDRESS>
