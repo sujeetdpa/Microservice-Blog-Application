@@ -15,5 +15,5 @@ public interface BlogService {
 
     void deleteBlog(Long id);
 
-    BlogResponseList searchBlog(String key);
+    BlogResponseList searchBlog(String title);
 }

@@ -89,8 +89,8 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public BlogResponseList searchBlog(String key) {
-        List<Blog> blogs = Optional.ofNullable(key).map(blogRepository::searchByTitle).orElseThrow(() -> new BlogNotFoundException("No Blog found matching string: " + key));
+    public BlogResponseList searchBlog(String title) {
+        List<Blog> blogs = Optional.ofNullable(title).map(blogRepository::searchByTitle).orElseThrow(() -> new BlogNotFoundException("No Blog found matching string: " + title));
         List<BlogResponse> blogResponses = blogs.stream().map(blogMapper::map).collect(Collectors.toList());
         BlogResponseList responseList=new BlogResponseList();
         responseList.setNumOfItems(blogResponses.size());

@@ -49,8 +49,8 @@ public class BlogController {
         return new ResponseEntity<>("Deleted", HttpStatus.NO_CONTENT);
     }
     @GetMapping(value = "/search")
-    public ResponseEntity<BlogResponseList> searchBlog(@RequestParam(value = "key") String key){
-        BlogResponseList responseList=blogService.searchBlog(key);
+    public ResponseEntity<BlogResponseList> searchBlog(@RequestParam(value = "title") String title){
+        BlogResponseList responseList=blogService.searchBlog(title);
         return new ResponseEntity<>(responseList,HttpStatus.OK);
     }
 }
